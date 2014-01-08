@@ -1,6 +1,6 @@
 class Stack {
     struct node {
-        int data;
+        int *data;
         node *prev;
     };
 
@@ -10,5 +10,5 @@ public:
     void push(int);
     bool is_empty();
     int pop();
-    int peek();
+    int* peek();
 };

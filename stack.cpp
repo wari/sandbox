@@ -7,11 +7,11 @@ Stack::Stack(int v) {
     push(v);
 }
 
-int Stack::peek() {
+int* Stack::peek() {
     if (top != NULL) {
         return top->data;
     }
-    return -255;
+    return NULL;
 }
 
 bool Stack::is_empty() {
@@ -25,11 +25,12 @@ int Stack::pop() {
     if (top == NULL) {
         return -255;
     } else {
-        ret = top->data;
+        ret = *(top->data);
         prev = top->prev;
         cur = top;
         top = prev;
 
+        //delete top->data;
         delete cur;
         return ret;
     }
@@ -38,6 +39,6 @@ int Stack::pop() {
 void Stack::push(int v) {
     node *s = new node;
     s->prev = top;
-    s->data = v;
+    s->data = new int(v);
     top = s;
 }
