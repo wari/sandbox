@@ -9,34 +9,35 @@ Stack::Stack(int v) {
 
 int Stack::peek() {
     if (top != NULL) {
-        return (*top->data);
+        return top->data;
     }
-    return NULL;
+    return -255;
+}
+
+bool Stack::is_empty() {
+    return (top == NULL);
 }
 
 int Stack::pop() {
-    int *ret, *v;
+    int ret;
     node *prev;
     node *cur;
     if (top == NULL) {
-        return NULL;
+        return -255;
     } else {
-        v = top->data;
-        ret = v;
+        ret = top->data;
         prev = top->prev;
         cur = top;
         top = prev;
 
         delete cur;
-        delete v;
-        return *ret;
+        return ret;
     }
 }
 
 void Stack::push(int v) {
     node *s = new node;
     s->prev = top;
-    s->data = new int(v);
+    s->data = v;
     top = s;
-    cout << s << endl;
 }

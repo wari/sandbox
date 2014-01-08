@@ -5,25 +5,23 @@
 
 using namespace std;
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char *argv[])
 {
     Stack s(5);
-    s.peek();
-    exit(0);
 
     for (int i=0; i<10; i++) {
         s.push(i);
     }
 
-    while (s.peek() != NULL) {
+    while (s.is_empty() != true) {
         cout << s.pop() << endl;
     }
 
-    for (int i=0; i<10; i++) {
+    for (int i=9; i>=0; i--) {
         s.push(i);
     }
 
-    while (s.peek() != NULL) {
+    while (s.is_empty() != true) {
         cout << s.pop() << endl;
     }
 
