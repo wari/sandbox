@@ -9,6 +9,6 @@ public:
     Stack(int);
     void push(int);
     bool is_empty();
-    int pop();
+    int* pop();
     int* peek();
 };

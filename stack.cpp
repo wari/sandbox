@@ -18,21 +18,19 @@ bool Stack::is_empty() {
     return (top == NULL);
 }
 
-int Stack::pop() {
-    int ret;
-    node *prev;
-    node *cur;
+int* Stack::pop() {
+    int *ptr;
+    node *prev, *cur;
     if (top == NULL) {
-        return -255;
+        return NULL;
     } else {
-        ret = *(top->data);
+        ptr = top->data;
         prev = top->prev;
         cur = top;
         top = prev;
 
-        //delete top->data;
         delete cur;
-        return ret;
+        return ptr;
     }
 }
 
