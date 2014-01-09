@@ -4,25 +4,34 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Node	include/queue.h	/^    struct Node {$/;"	s	class:Queue
+Queue	include/queue.h	/^class Queue {$/;"	c
+Queue	queue.cpp	/^Queue::Queue() {$/;"	f	class:Queue
 Stack	include/stack.h	/^class Stack {$/;"	c
 Stack	stack.cpp	/^Stack::Stack(int v) {$/;"	f	class:Stack
 a	main.cpp	/^    static int a;$/;"	m	class:first	file:
 a	main.cpp	/^int first::a = 1;$/;"	m	class:first	file:
 b	main.cpp	/^    int b;$/;"	m	class:first	file:
 b	main.cpp	/^    int b;$/;"	m	class:second	file:
+back	include/queue.h	/^    Node *back;$/;"	m	class:Queue
+data	include/queue.h	/^        int* data;$/;"	m	struct:Queue::Node
 data	include/stack.h	/^        int *data;$/;"	m	struct:Stack::node
 first	main.cpp	/^class first {$/;"	c	file:
+front	include/queue.h	/^    Node *front;$/;"	m	class:Queue
+get	queue.cpp	/^int* Queue::get() {$/;"	f	class:Queue
 getA	main.cpp	/^    static int getA() {$/;"	f	class:first
 getB	main.cpp	/^    int getB() {$/;"	f	class:first
 getB	main.cpp	/^    int getB() {$/;"	f	class:second
 is_empty	stack.cpp	/^bool Stack::is_empty() {$/;"	f	class:Stack
 main	main.cpp	/^int main() {$/;"	f
 main	stacks.cpp	/^int main(int argc, char *argv[])$/;"	f
+next	include/queue.h	/^        Node *next;$/;"	m	struct:Queue::Node
 node	include/stack.h	/^    struct node {$/;"	s	class:Stack
 peek	stack.cpp	/^int* Stack::peek() {$/;"	f	class:Stack
 pop	stack.cpp	/^int* Stack::pop() {$/;"	f	class:Stack
 prev	include/stack.h	/^        node *prev;$/;"	m	struct:Stack::node
 push	stack.cpp	/^void Stack::push(int v) {$/;"	f	class:Stack
+put	queue.cpp	/^void Queue::put(int n) {$/;"	f	class:Queue
 second	main.cpp	/^class second {$/;"	c	file:
 seeFS	main.cpp	/^void seeFS(first *a, second *b) {$/;"	f
 setA	main.cpp	/^    static void setA(int v) {$/;"	f	class:first
