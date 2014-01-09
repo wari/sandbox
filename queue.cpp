@@ -1,16 +1,19 @@
 #include "stdafx.h"
 
+using namespace std;
+
 Queue::Queue() {
     front = back = NULL;
 }
 
 void Queue::put(int n) {
-    Node *cur;
-    cur = new Node;
+    Node *cur = new Node;
     cur->next = NULL;
+    cur->data = new int(n);
 
     if (front == NULL) {
         front = back = cur;
+        return;
     }
 
     back->next = cur;
@@ -27,6 +30,6 @@ int* Queue::get() {
     int *n = cur->data;
 
     front = cur->next;
-    delete front;
+    delete cur;
     return n;
 }

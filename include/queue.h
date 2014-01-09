@@ -8,6 +8,6 @@ class Queue {
     Node *back;
 public:
     Queue();
-    void put(int)
+    void put(int);
     int* get();
 };
