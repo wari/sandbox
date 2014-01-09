@@ -7,10 +7,8 @@
 
 #include "targetver.h"
 #include "stack.h"
-#include<process.h>
 
 #include <stdio.h>
-#include <tchar.h>
 #include <iostream>
 
 

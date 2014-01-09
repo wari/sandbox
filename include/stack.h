@@ -8,6 +8,7 @@ class Stack {
 public:
     Stack(int);
     void push(int);
-    int pop();
-    int peek();
+    bool is_empty();
+    int* pop();
+    int* peek();
 };
